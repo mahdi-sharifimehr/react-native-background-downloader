@@ -1,0 +1,8 @@
+for avoid to interrupt connection while downloading
+in RNBackgroundDownloaderModule.java in fetchConfiguration line 82 add these:
+
+.enableRetryOnNetworkGain(true)
+.setAutoRetryMaxAttempts(100)
+
+for set Concurrent Limit to 1 change line 84
+.setDownloadConcurrentLimit(1)
